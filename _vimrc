@@ -51,7 +51,6 @@ set directory=$VIM\files\swap " Set swap files
 set updatecount=100
 set undofile                  " Set undo files
 set undodir=$VIM\files\undo
-
 set vb t_vb=                 " Stop bell
 set nowrap                   " Display auto new line
 set laststatus=2             " Always show statusline
@@ -78,6 +77,16 @@ set shiftround               " >> indents to next multiple of 'shiftwidth'
 set expandtab                " Use spaces instead of tabs.
 set autoindent               " Indent accroding to previous line.
 set smartindent              "
+
+" Key bindings
+let mapleader=' '
+inoremap <C-e> <Esc>A
+inoremap <C-a> <Esc>I
+inoremap <C-n> <Esc>ji
+inoremap <C-p> <Esc>ka
+inoremap <C-CR> <Esc>o
+inoremap <C-S-CR> <Esc>O
+nnoremap <leader>t :terminal<CR>
 
 " UI settings
 set nu                       " Show line number
