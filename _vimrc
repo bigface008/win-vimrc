@@ -34,6 +34,13 @@ function MyDiff()
   endif
 endfunction
 
+" Plugin list
+call plug#begin('D:\program\Vim\vimfiles\autoload')
+Plug 'vim-airline/vim-airline'
+Plug 'tomasiser/vim-code-dark'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+call plug#end()
+
 " Basic settings
 syntax enable                " Enable syntax check
 syntax on                    " Enable syntax highlighting
@@ -57,6 +64,7 @@ set laststatus=2             " Always show statusline
 set display=lastline         " Show as much as possible of the last line
 set showmatch                " Show match bracket
 " set showmode               " Show current mode in command-line
+set noshowmode               " No mode in command-line
 set showcmd                  " Show already typed keys when more are expected
 set hlsearch                 " Hightlight the search
 set incsearch                " Move to fit position after each char input
@@ -82,8 +90,8 @@ set smartindent              "
 let mapleader=' '
 inoremap <C-e> <Esc>A
 inoremap <C-a> <Esc>I
-inoremap <C-n> <Esc>ji
-inoremap <C-p> <Esc>ka
+" inoremap <C-j> <Esc>ja
+" inoremap <C-k> <Esc>ka
 inoremap <C-CR> <Esc>o
 inoremap <C-S-CR> <Esc>O
 nnoremap <leader>t :terminal<CR>
@@ -97,9 +105,9 @@ set guifont=Source_Code_Variable:h11:b:cDEFAULT " Set font type
 " set guifont=Fantasque_Sans_Mono:h12:b:cDEFAULT
 set gcr=a:block-blinkon0     " No flashing cursor
 " set gcr=a:block-blinkon0,i:ver5-blinkon0 " Set cursor type
-set listchars=tab:>-,trail:- " Show tab and space
-highlight WhitespaceEOL ctermbg=red guibg=red
-match WhitespaceEOL /\s\+$/
+" set listchars=tab:>-,trail:- " Show tab and space
+" highlight WhitespaceEOL ctermbg=red guibg=red
+" match WhitespaceEOL /\s\+$/
 
 " GUI settings
 if has("gui_running")
@@ -129,16 +137,6 @@ endif
 source $VIMRUNTIME/delmenu.vim " Solve messy code of menu
 source $VIMRUNTIME/menu.vim
 language messages zh_CN.utf-8 " Solve messy code of console
-
-" Plugin list
-set rtp+=$VIM/vimfiles/bundle/Vundle.vim/
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim' " Plugins list starts from here
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-call vundle#end()
 
 " Plugin settings
 let NERDTreeWinPos='left'    " Postion of nerdtree
