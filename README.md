@@ -5,7 +5,7 @@
 
 ## Installation
 1. 克隆本项目。
-2. 手动在$VIM路径下创建files\backup，files\undo，files\swapwenjianjia。
+2. 手动在$VIM路径下创建files\backup，files\undo，files\swap文件夹。
 3. 安装fonts中的字体。
 4. 把themes中的主题放到vimfiles\color中。
 
@@ -16,4 +16,8 @@
 
 ## Notes
 记录使用中遇到的问题并尝试解决
+### 无法将tab替换为space
+在vimrc中使用set expandtab无法将tab替换为space。
+gvim在启动后手动设置`:set expandtab`可以正常使用。
+但是仍然找不到解决方案。
 

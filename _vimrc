@@ -34,13 +34,6 @@ function MyDiff()
   endif
 endfunction
 
-" Plugin list
-call plug#begin('D:\program\Vim\vimfiles\autoload')
-Plug 'vim-airline/vim-airline'
-Plug 'tomasiser/vim-code-dark'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-call plug#end()
-
 " Basic settings
 syntax enable                " Enable syntax check
 syntax on                    " Enable syntax highlighting
@@ -56,7 +49,7 @@ set backupext=-vimbackup
 set backupskip=
 set directory=$VIM\files\swap " Set swap files
 set updatecount=100
-set undofile                  " Set undo files
+set undofile                 " Set undo files
 set undodir=$VIM\files\undo
 set vb t_vb=                 " Stop bell
 set nowrap                   " Display auto new line
@@ -78,23 +71,14 @@ set paste                    " Keep format when pasting
 set ignorecase               " Ignore case when searching
 
 " Tab and indent behavior settings
-set tabstop=4                "
-set softtabstop=4            " Tab key indents by 4 spaces.
-set shiftwidth=4             " >> indents by 4 spaces.
-set shiftround               " >> indents to next multiple of 'shiftwidth'
-set expandtab                " Use spaces instead of tabs.
-set autoindent               " Indent accroding to previous line.
-set smartindent              "
-
-" Key bindings
-let mapleader=' '
-inoremap <C-e> <Esc>A
-inoremap <C-a> <Esc>I
-" inoremap <C-j> <Esc>ja
-" inoremap <C-k> <Esc>ka
-inoremap <C-CR> <Esc>o
-inoremap <C-S-CR> <Esc>O
-nnoremap <leader>t :terminal<CR>
+set tabstop=4 shiftwidth=4 expandtab
+" set tabstop=4
+" set shiftwidth=4
+" set softtabstop=4
+" set expandtab                " Something wrong
+" set shiftround
+" set autoindent
+" set smartindent
 
 " UI settings
 set nu                       " Show line number
@@ -108,8 +92,6 @@ set gcr=a:block-blinkon0     " No flashing cursor
 " set listchars=tab:>-,trail:- " Show tab and space
 " highlight WhitespaceEOL ctermbg=red guibg=red
 " match WhitespaceEOL /\s\+$/
-
-" GUI settings
 if has("gui_running")
 au GUIEnter * simalt ~x      " Maximize gui window
 " set background=dark        " Set background
@@ -125,6 +107,35 @@ set guioptions-=b            " Hide bottom scroll bar
 " set showtabline=0          " Hide tab line
 endif
 
+" Plugin list
+call plug#begin('D:\program\Vim\vimfiles\autoload')
+Plug 'vim-airline/vim-airline'
+" Plug 'tomasiser/vim-code-dark'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+call plug#end()
+
+" Plugin settings
+let NERDTreeWinPos='left'    " Postion of nerdtree
+let NERDTreeWinSize=30       " Size of nerdtree
+map <C-o> :NERDTreeToggle<CR> " Shortcut for open nerdtree
+let g:ctrlp_map='<c-p>'      " Open file with <c-p>
+let g:ctrlp_cmd='CtrlP'
+
+" Key bindings
+let mapleader=' '
+inoremap <C-e> <Esc>A
+inoremap <C-a> <Esc>I
+inoremap <C-j> <Esc>ja
+inoremap <C-k> <Esc>ka
+inoremap <C-CR> <Esc>o
+inoremap <C-S-CR> <Esc>O
+nnoremap <leader>t :terminal<CR>
+nnoremap <leader>oc :e $VIM\_vimrc<CR>
+nnoremap <leader>rc :source $VIM\_vimrc<CR>
+inoremap ( ()<ESC>i
+cnoremap [ []<ESC>i
+inoremap { {}<ESC>i
+
 " Code settings
 " set termencoding=cp936
 set encoding=utf-8
@@ -137,10 +148,3 @@ endif
 source $VIMRUNTIME/delmenu.vim " Solve messy code of menu
 source $VIMRUNTIME/menu.vim
 language messages zh_CN.utf-8 " Solve messy code of console
-
-" Plugin settings
-let NERDTreeWinPos='left'    " Postion of nerdtree
-let NERDTreeWinSize=30       " Size of nerdtree
-map <C-o> :NERDTreeToggle<CR> " Shortcut for open nerdtree
-let g:ctrlp_map='<c-p>'      " Open file with <c-p>
-let g:ctrlp_cmd='CtrlP'
