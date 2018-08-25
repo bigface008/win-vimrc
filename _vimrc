@@ -99,8 +99,8 @@ set ruler                    " Set ruler
 set guifont=Fantasque_Sans_Mono:h12:b:cDEFAULT
 set gcr=a:block-blinkon0     " No flashing cursor
 " set gcr=a:block-blinkon0,i:ver5-blinkon0 " Set cursor type
-" set list
-" set listchars=tab:>-,trail:.,extends:>,precedes:<,nbsp:. " Show tab and space
+set list
+set listchars=tab:>\ ,trail:.,extends:>,precedes:<,nbsp:. " Show tab and space
 " highlight WhitespaceEOL ctermbg=red guibg=red
 " match WhitespaceEOL /\s\+$/
 if has("gui_running")
@@ -128,6 +128,8 @@ map <C-o> :NERDTreeToggle<CR> " Shortcut for open nerdtree
 " let g:ctrlp_cmd='CtrlP'
 let g:indentLine_enabled=1
 let g:indentLine_char='|'
+let g:indentLine_leadingSpaceEnabled=1
+let g:indentLine_leadingSpaceChar='·'
 
 " Key bindings
 let mapleader=' '
