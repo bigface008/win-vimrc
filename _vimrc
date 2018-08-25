@@ -34,6 +34,13 @@ function MyDiff()
   endif
 endfunction
 
+" Plugin list
+call plug#begin('D:\program\Vim\vimfiles\autoload')
+Plug 'vim-airline/vim-airline'
+Plug 'tomasiser/vim-code-dark'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+call plug#end()
+
 " Basic settings
 syntax enable                " Enable syntax check
 syntax on                    " Enable syntax highlighting
@@ -71,25 +78,26 @@ set paste                    " Keep format when pasting
 set ignorecase               " Ignore case when searching
 
 " Tab and indent behavior settings
-set tabstop=4 shiftwidth=4 expandtab
-" set tabstop=4
-" set shiftwidth=4
-" set softtabstop=4
-" set expandtab                " Something wrong
-" set shiftround
-" set autoindent
-" set smartindent
+" set tabstop=4 shiftwidth=4 expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab                " Something wrong
+set shiftround
+set autoindent
+set smartindent
 
 " UI settings
 set nu                       " Show line number
 set ruler                    " Set ruler
-set guifont=Source_Code_Variable:h11:b:cDEFAULT " Set font type
+" set guifont=Source_Code_Variable:h11:b:cDEFAULT " Set font type
 " set guifont=Courier_new:h11:b:cDEFAULT
 " set guifont=Fira_Code:h11:b:cDEFAULT
-" set guifont=Fantasque_Sans_Mono:h12:b:cDEFAULT
+set guifont=Fantasque_Sans_Mono:h12:b:cDEFAULT
 set gcr=a:block-blinkon0     " No flashing cursor
 " set gcr=a:block-blinkon0,i:ver5-blinkon0 " Set cursor type
-" set listchars=tab:>-,trail:- " Show tab and space
+set list
+set listchars=tab:>-,trail:.,extends:>,precedes:<,nbsp:. " Show tab and space
 " highlight WhitespaceEOL ctermbg=red guibg=red
 " match WhitespaceEOL /\s\+$/
 if has("gui_running")
@@ -97,7 +105,7 @@ au GUIEnter * simalt ~x      " Maximize gui window
 " set background=dark        " Set background
 colorscheme molokai          " Set theme
 set cursorline               " Show line cursor
-set cursorcolumn             " Shoe column cursor
+set cursorcolumn             " Show column cursor
 set cc=80                    " Hightlight column 80
 set guioptions-=m            " Hide menu bar
 set guioptions-=T            " Hide tool bar
@@ -107,19 +115,13 @@ set guioptions-=b            " Hide bottom scroll bar
 " set showtabline=0          " Hide tab line
 endif
 
-" Plugin list
-call plug#begin('D:\program\Vim\vimfiles\autoload')
-Plug 'vim-airline/vim-airline'
-" Plug 'tomasiser/vim-code-dark'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-call plug#end()
-
 " Plugin settings
+" let g:airline_theme='codedark' " Theme of airline
 let NERDTreeWinPos='left'    " Postion of nerdtree
 let NERDTreeWinSize=30       " Size of nerdtree
 map <C-o> :NERDTreeToggle<CR> " Shortcut for open nerdtree
-let g:ctrlp_map='<c-p>'      " Open file with <c-p>
-let g:ctrlp_cmd='CtrlP'
+" let g:ctrlp_map='<c-p>'      " Open file with <c-p>
+" let g:ctrlp_cmd='CtrlP'
 
 " Key bindings
 let mapleader=' '
@@ -130,8 +132,8 @@ inoremap <C-k> <Esc>ka
 inoremap <C-CR> <Esc>o
 inoremap <C-S-CR> <Esc>O
 nnoremap <leader>t :terminal<CR>
-nnoremap <leader>oc :e $VIM\_vimrc<CR>
-nnoremap <leader>rc :source $VIM\_vimrc<CR>
+nnoremap <F2> :e $VIM\_vimrc<CR>
+" nnoremap <leader>rc :source $VIM\_vimrc<CR>
 inoremap ( ()<ESC>i
 cnoremap [ []<ESC>i
 inoremap { {}<ESC>i
