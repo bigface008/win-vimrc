@@ -39,6 +39,9 @@ call plug#begin('D:\program\Vim\vimfiles\autoload')
 Plug 'vim-airline/vim-airline'
 Plug 'tomasiser/vim-code-dark'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'D:\program\fzf'
+" Plug 'junegunn/fzf.vim'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " Basic settings
@@ -65,7 +68,7 @@ set display=lastline         " Show as much as possible of the last line
 set showmatch                " Show match bracket
 " set showmode               " Show current mode in command-line
 set noshowmode               " No mode in command-line
-set showcmd                  " Show already typed keys when more are expected
+set showcmd                " Show already typed keys when more are expected
 set hlsearch                 " Hightlight the search
 set incsearch                " Move to fit position after each char input
 set hidden                   " Swith between buffers without saving first
@@ -74,11 +77,11 @@ set backspace=indent,eol,start " Better backspace
 set ttyfast                  " Fast redrawing
 set lazyredraw               " Only redraw when necessary
 " set novisualbell           " Something wrong
-set paste                    " Keep format when pasting
+" set paste                  " Keep format when pasting, something wrong
 set ignorecase               " Ignore case when searching
+set autoread                 " Auto read file when changed
 
 " Tab and indent behavior settings
-" set tabstop=4 shiftwidth=4 expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -96,8 +99,8 @@ set ruler                    " Set ruler
 set guifont=Fantasque_Sans_Mono:h12:b:cDEFAULT
 set gcr=a:block-blinkon0     " No flashing cursor
 " set gcr=a:block-blinkon0,i:ver5-blinkon0 " Set cursor type
-set list
-set listchars=tab:>-,trail:.,extends:>,precedes:<,nbsp:. " Show tab and space
+" set list
+" set listchars=tab:>-,trail:.,extends:>,precedes:<,nbsp:. " Show tab and space
 " highlight WhitespaceEOL ctermbg=red guibg=red
 " match WhitespaceEOL /\s\+$/
 if has("gui_running")
@@ -117,11 +120,14 @@ endif
 
 " Plugin settings
 " let g:airline_theme='codedark' " Theme of airline
+let NERDTreeShowHidden=1
 let NERDTreeWinPos='left'    " Postion of nerdtree
 let NERDTreeWinSize=30       " Size of nerdtree
 map <C-o> :NERDTreeToggle<CR> " Shortcut for open nerdtree
 " let g:ctrlp_map='<c-p>'      " Open file with <c-p>
 " let g:ctrlp_cmd='CtrlP'
+let g:indentLine_enabled=1
+let g:indentLine_char='|'
 
 " Key bindings
 let mapleader=' '
