@@ -10,8 +10,8 @@ set guifont=Fira_Code:h11
 " set guifont=Consolas:h12
 
 " Set cursor type
-set gcr=a:block-blinkon0     " No flashing cursor
-" set gcr=a:block-blinkon0,i:ver5-blinkon0
+" set gcr=a:block-blinkon0     " No flashing cursor
+set gcr=a:block-blinkon0,i:ver5-blinkon0
 
 " Show tab and special space
 set list

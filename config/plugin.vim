@@ -13,6 +13,8 @@ Plug 'terryma/vim-multiple-cursors'
 " Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-gitgutter'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Airline
@@ -59,3 +61,12 @@ map <leader>t :TagbarToggle<CR>
 
 " NerdCommenter
 let g:NERDSpaceDelims=1
+
+" EasyMotion
+let g:EasyMotion_smartcase = 1
+" let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+map <Leader><leader>h <Plug>(easymotion-linebackward)
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><leader>l <Plug>(easymotion-lineforward)
+map <Leader><leader>. <Plug>(easymotion-repeat) " Repeat
