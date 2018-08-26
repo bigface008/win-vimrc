@@ -1,5 +1,3 @@
-" Plugin settings
-
 " Plugin list
 call plug#begin('D:\program\Vim\vimfiles\autoload')
 Plug 'vim-airline/vim-airline'
