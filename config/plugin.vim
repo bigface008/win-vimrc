@@ -68,8 +68,8 @@ let g:EasyMotion_smartcase = 1 " Smart case
 " let g:EasyMotion_startofline = 0 " Keep cursor colum when JK motion
 " map f <Plug>(easymotion-prefix)
 " map ff <Plug>(easymotion-s)
-map <leader><leader>w <Plug>(easymotion-bd-w)
-map <leader><leader>e <Plug>(easymotion-bd-e)
+nmap <leader><leader>w <Plug>(easymotion-bd-w)
+nmap <leader><leader>e <Plug>(easymotion-bd-e)
 " map fh <Plug>(easymotion-linebackward)
 " map fj <Plug>(easymotion-j)
 " map fk <Plug>(easymotion-k)
