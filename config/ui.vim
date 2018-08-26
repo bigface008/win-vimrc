@@ -5,8 +5,8 @@ set ruler                    " Set ruler
 " Set font type
 " set guifont=Source_Code_Variable:h11:b:cDEFAULT
 " set guifont=Courier_new:h11:b:cDEFAULT
-" set guifont=Fira_Code:h11:b:cDEFAULT
-set guifont=Fantasque_Sans_Mono:h12:b:cDEFAULT
+set guifont=Fira_Code:h11
+" set guifont=Fantasque_Sans_Mono:h12
 " set guifont=Consolas:h12
 
 " Set cursor type

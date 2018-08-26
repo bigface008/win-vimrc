@@ -35,9 +35,9 @@ function MyDiff()
 endfunction
 
 source $VIM\config\basic.vim
+source $VIM\config\keybinding.vim
 source $VIM\config\plugin.vim
 source $VIM\config\ui.vim
-source $VIM\config\keybinding.vim
 
 " Code settings
 " set termencoding=cp936

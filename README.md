@@ -15,11 +15,18 @@
 3. 对Git有必要的功能支持。
 
 ## Notes
-记录使用中遇到的问题并尝试解决
-### 无法将tab替换为space
-在vimrc中使用set expandtab无法将tab替换为space。
-gvim在启动后手动设置`:set expandtab`可以正常使用。
-但是仍然找不到解决方案。
-
-#### 解决方案
+### Problems
+#### 无法将tab替换为space
+在vimrc中使用`set expandtab`无法将tab替换为space。不过在gvim启动后手动设置
+`:set expandtab`可以正常使用。
+##### 解决方案
 注释掉`set paste`。:v:
+### Tips
+#### 使用ctrlp时可以安装ag来加速
+有关ag的信息参见[ag official](https://github.com/ggreer/the_silver_searcher)和
+[ag unofficial windows daily build](https://github.com/k-takata/the_silver_searcher-win32/releases)
+。目前ag使用有些问题所以没有启用。
+#### 使用codedark主题需要安装插件vim-code-dark
+取消相应插件注释并安装即可。
+#### 插件tagbar需要下载ctags
+[universal ctags daily build](https://github.com/universal-ctags/ctags-win32/releases)
