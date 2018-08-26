@@ -60,13 +60,18 @@ let g:tagbar_ctags_bin='D:\program\ctags\ctags.exe'
 map <leader>t :TagbarToggle<CR>
 
 " NerdCommenter
-let g:NERDSpaceDelims=1
+let g:NERDSpaceDelims=1      " Put one space between comment and first word
 
 " EasyMotion
-let g:EasyMotion_smartcase = 1
-" let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
-map <Leader><leader>h <Plug>(easymotion-linebackward)
-map <Leader><Leader>j <Plug>(easymotion-j)
-map <Leader><Leader>k <Plug>(easymotion-k)
-map <Leader><leader>l <Plug>(easymotion-lineforward)
-map <Leader><leader>. <Plug>(easymotion-repeat) " Repeat
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1 " Smart case
+" let g:EasyMotion_startofline = 0 " Keep cursor colum when JK motion
+" map f <Plug>(easymotion-prefix)
+" map ff <Plug>(easymotion-s)
+map <leader><leader>w <Plug>(easymotion-bd-w)
+map <leader><leader>e <Plug>(easymotion-bd-e)
+" map fh <Plug>(easymotion-linebackward)
+" map fj <Plug>(easymotion-j)
+" map fk <Plug>(easymotion-k)
+" map fl <Plug>(easymotion-lineforward)
+" map f. <Plug>(easymotion-repeat)
