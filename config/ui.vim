@@ -4,6 +4,7 @@ set ruler                    " Set ruler
 
 " Set font type
 " set guifont=Source_Code_Variable:h11:b:cDEFAULT
+" set guifont=Source_Code_Variable:h11
 " set guifont=Courier_new:h11:b:cDEFAULT
 set guifont=Fira_Code:h11
 " set guifont=Fantasque_Sans_Mono:h12

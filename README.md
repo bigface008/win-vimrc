@@ -4,10 +4,12 @@
 语言有C、JS、markdown。（毕竟似乎只用得到这些语言）
 
 ## Installation
-1. 克隆本项目。
-2. 手动在$VIM路径下创建files\backup，files\undo，files\swap文件夹。
-3. 安装fonts中的字体。
-4. 把themes中的主题放到vimfiles\color中。
+1. 从[vim-jp](http://vim-jp.org/redirects/)或[vim-github](https://github.com/vim/vim-win32-installer/releases)
+获取64位的版本，更换掉32位版本的vim8x文件夹。（不知为啥找不到正常的64位安装包）
+2. 克隆本项目。
+3. 手动在$VIM路径下创建files\backup，files\undo，files\swap文件夹。
+4. 安装fonts中的字体。
+5. 把themes中的主题放到vimfiles\color中。
 
 ## Features
 1. C、JS的代码高亮和补全、语法提示、搜索替换和跳转。
@@ -30,3 +32,34 @@
 取消相应插件注释并安装即可。
 #### 插件tagbar需要下载ctags
 [universal ctags daily build](https://github.com/universal-ctags/ctags-win32/releases)
+
+## Plugins List
+### vim-airline/vim-airline
+[airline](https://github.com/vim-airline/vim-airline)
+### tomasiser/vim-code-dark
+[vim-code-dark](https://github.com/tomasiser/vim-code-dark)
+### scrooloose/nerdtree
+[nerdtree](https://github.com/scrooloose/nerdtree)
+### junegunn/fzf.vim
+[fzf](https://github.com/junegunn/fzf)
+[fzf.vim](https://github.com/junegunn/fzf.vim)
+### shougo/neocomplete.vim
+[neocomplete](https://github.com/Shougo/neocomplete.vim)
+### Yggdroot/indentLine
+[indentLine](https://github.com/Yggdroot/indentLine)
+### ctrlpvim/ctrlp.vim
+[ctrlp](https://github.com/ctrlpvim/ctrlp.vim)
+### majutsushi/tagbar
+[tagbar](https://github.com/majutsushi/tagbar)
+### terryma/vim-multiple-cursors
+[vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+### tpope/vim-surround
+[vim-surround](https://github.com/tpope/vim-surround)
+### scrooloose/nerdcommenter
+[nerdcommenter](https://github.com/scrooloose/nerdcommenter)
+### jiangmiao/auto-pairs
+[auto-pairs](https://github.com/jiangmiao/auto-pairs)
+### airblade/vim-gitgutter
+[vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+### easymotion/vim-easymotion
+[vim-easymotion](https://github.com/easymotion/vim-easymotion)

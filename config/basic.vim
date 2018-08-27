@@ -23,6 +23,7 @@ set lazyredraw               " Only redraw when necessary
 " set paste                  " Keep format when pasting, something wrong
 set ignorecase               " Ignore case when searching
 set autoread                 " Auto read file when changed
+set updatetime=100           " Set updatetime
 
 " Backup settings
 " set nowritebackup          " No writeback when save file

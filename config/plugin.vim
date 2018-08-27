@@ -54,6 +54,8 @@ let g:indentLine_leadingSpaceChar='·'
 
 " Neocomplete
 let g:neocomplete#enable_at_startup = 1 " Settings for neocomplete
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 " Tagbar
 let g:tagbar_ctags_bin='D:\program\ctags\ctags.exe'
