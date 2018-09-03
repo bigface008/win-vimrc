@@ -24,7 +24,7 @@ set listchars=tab:>\ ,trail:.,extends:>,precedes:<,nbsp:.
 if has("gui_running")
 au GUIEnter * simalt ~x      " Maximize gui window
 " set background=dark        " Set background
-colorscheme molokai          " Set theme
+colorscheme gruvbox          " Set theme
 set cursorline               " Show line cursor
 set cursorcolumn             " Show column cursor
 set cc=80                    " Hightlight column 80
