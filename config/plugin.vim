@@ -57,14 +57,10 @@ let g:indentLine_leadingSpaceChar='·'  " Set sign for leading spaces.
 " let g:neocomplete#enable_smart_case = 1
 " let g:neocomplete#sources#syntax#min_keyword_length = 3
 " let g:neocomplete#max_list = 20
-
 let g:acp_enableAtStartup = 0          " Disable AutoComplPop.
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#enable_at_startup = 1 " Use neocomplete.
+let g:neocomplete#enable_smart_case = 1 " Use smartcase.
+let g:neocomplete#sources#syntax#min_keyword_length = 3 " Set minimum syntax keyword length.
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
