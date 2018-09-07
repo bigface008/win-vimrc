@@ -3,6 +3,7 @@ call plug#begin('D:\program\Vim\vimfiles\autoload')
 Plug 'vim-airline/vim-airline'
 " Plug 'tomasiser/vim-code-dark'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'xuyuanp/nerdtree-git-plugin'
 " Plug 'D:\program\fzf'
 " Plug 'junegunn/fzf.vim'
 Plug 'shougo/neocomplete.vim'
@@ -15,19 +16,25 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
+Plug 'tmhedberg/simpylfold'
 call plug#end()
 
 " Airline -------------------------------------------------------------------- "
-" let g:airline_theme='codedark' " Theme of airline
+" let g:airline_theme='codedark'       " Theme of airline.
+let g:airline#extensions#tabline#enabled = 1 " Enable tabline.
+let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number.
+let g:airline#extensions#tabline#show_tab_nr = 1 " Tab number.
 
 " NerdTree ------------------------------------------------------------------- "
-let NERDTreeShowHidden=1
-let NERDTreeWinPos='left'    " Postion of nerdtree
-let NERDTreeWinSize=30       " Size of nerdtree
-map <leader>n :NERDTreeToggle<CR> " Shortcut for open nerdtree
+let NERDTreeShowHidden=1               " Show hidden file.
+let NERDTreeShowLineNumbers=1          " Show line number.
+let NERDTreeWinPos='left'              " Postion of nerdtree.
+let NERDTreeWinSize=30                 " Size of nerdtree.
+let NERDTreeIgnore=['\.pyc$', '\~$']   " Ignore files in NERDTree.
+map <leader><leader>n :NERDTreeToggle<CR> " Shortcut for open nerdtree
 
 " Ctrlp ---------------------------------------------------------------------- "
-let g:ctrlp_map='<c-p>'      " Open file with <c-p>
+let g:ctrlp_map='<c-p>'                " Open file with <c-p>
 let g:ctrlp_cmd='CtrlP'
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.ttf  " Windows
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
@@ -125,21 +132,24 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " Tagbar --------------------------------------------------------------------- "
 let g:tagbar_ctags_bin='D:\program\ctags\ctags.exe'
-map <leader>t :TagbarToggle<CR>
+map <leader><leader>t :TagbarToggle<CR>
 
 " NerdCommenter -------------------------------------------------------------- "
-let g:NERDSpaceDelims=1      " Put one space between comment and first word
+let g:NERDSpaceDelims=1                " Put one space between comment and first word
 
 " EasyMotion ----------------------------------------------------------------- "
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-let g:EasyMotion_smartcase = 1 " Smart case
-" let g:EasyMotion_startofline = 0 " Keep cursor colum when JK motion
+let g:EasyMotion_do_mapping = 0        " Disable default mappings
+let g:EasyMotion_smartcase = 1         " Smart case
+" let g:EasyMotion_startofline = 0     " Keep cursor colum when JK motion
 " map f <Plug>(easymotion-prefix)
 " map ff <Plug>(easymotion-s)
-nmap <leader><leader>w <Plug>(easymotion-bd-w)
-nmap <leader><leader>e <Plug>(easymotion-bd-e)
+nmap <leader>w <Plug>(easymotion-overwin-w)
+nmap <leader>e <Plug>(easymotion-overwin-e)
 " map fh <Plug>(easymotion-linebackward)
-nmap <leader><leader>j <Plug>(easymotion-j)
-nmap <leader><leader>k <Plug>(easymotion-k)
+nmap <leader>j <Plug>(easymotion-j)
+nmap <leader>k <Plug>(easymotion-k)
 " map fl <Plug>(easymotion-lineforward)
 " map f. <Plug>(easymotion-repeat)
+
+" SimplyFold ----------------------------------------------------------------- "
+let g:SimpylFold_docstring_preview=1

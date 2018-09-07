@@ -46,3 +46,7 @@ set expandtab                " Use spaces instead of tabs
 set shiftround               " >> indents to next multiple of 'shiftwidth'
 set autoindent               " Indent according to previous line
 set smartindent              " Smart indent
+
+" Enable Folding
+set foldmethod=indent
+set foldlevel=99
