@@ -34,3 +34,4 @@
 取消相应插件注释并安装即可。
 #### 插件tagbar需要下载ctags
 [universal ctags daily build](https://github.com/universal-ctags/ctags-win32/releases)
+
