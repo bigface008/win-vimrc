@@ -1,4 +1,6 @@
 # WinVimrc - vimrc on windows
+该项目已经停止使用，vim不适合在windows上折腾。请好好使用VSCode。
+
 本项目试图实现一份快速、轻量、编辑体验完美、**普通**的Windows下的Vim配置。项目包
 含在windows下正常工作的vim配置文件和相应的颜色主题文件、字体文件，目前考虑支持的
 语言有C、JS、markdown。（毕竟似乎只用得到这些语言）
@@ -32,34 +34,3 @@
 取消相应插件注释并安装即可。
 #### 插件tagbar需要下载ctags
 [universal ctags daily build](https://github.com/universal-ctags/ctags-win32/releases)
-
-## Plugins List
-### vim-airline/vim-airline
-[airline](https://github.com/vim-airline/vim-airline)
-### tomasiser/vim-code-dark
-[vim-code-dark](https://github.com/tomasiser/vim-code-dark)
-### scrooloose/nerdtree
-[nerdtree](https://github.com/scrooloose/nerdtree)
-### junegunn/fzf.vim
-[fzf](https://github.com/junegunn/fzf)
-[fzf.vim](https://github.com/junegunn/fzf.vim)
-### shougo/neocomplete.vim
-[neocomplete](https://github.com/Shougo/neocomplete.vim)
-### Yggdroot/indentLine
-[indentLine](https://github.com/Yggdroot/indentLine)
-### ctrlpvim/ctrlp.vim
-[ctrlp](https://github.com/ctrlpvim/ctrlp.vim)
-### majutsushi/tagbar
-[tagbar](https://github.com/majutsushi/tagbar)
-### terryma/vim-multiple-cursors
-[vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
-### tpope/vim-surround
-[vim-surround](https://github.com/tpope/vim-surround)
-### scrooloose/nerdcommenter
-[nerdcommenter](https://github.com/scrooloose/nerdcommenter)
-### jiangmiao/auto-pairs
-[auto-pairs](https://github.com/jiangmiao/auto-pairs)
-### airblade/vim-gitgutter
-[vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-### easymotion/vim-easymotion
-[vim-easymotion](https://github.com/easymotion/vim-easymotion)

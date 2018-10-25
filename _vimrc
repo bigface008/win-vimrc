@@ -34,8 +34,8 @@ function MyDiff()
   endif
 endfunction
 
-source $VIM\config\basic.vim
 source $VIM\config\keybinding.vim
+source $VIM\config\basic.vim
 source $VIM\config\plugin.vim
 source $VIM\config\ui.vim
 

@@ -1,12 +1,17 @@
 " Plugin list
 call plug#begin('D:\program\Vim\vimfiles\autoload')
 Plug 'vim-airline/vim-airline'
-" Plug 'tomasiser/vim-code-dark'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tomasiser/vim-code-dark'
+Plug 'colepeters/spacemacs-theme.vim'
+Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'xuyuanp/nerdtree-git-plugin'
 " Plug 'D:\program\fzf'
 " Plug 'junegunn/fzf.vim'
 Plug 'shougo/neocomplete.vim'
+Plug 'shougo/neosnippet.vim'
+Plug 'shougo/neosnippet-snippets'
 Plug 'Yggdroot/indentLine'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
@@ -24,6 +29,7 @@ call plug#end()
 let g:airline#extensions#tabline#enabled = 1 " Enable tabline.
 let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number.
 let g:airline#extensions#tabline#show_tab_nr = 1 " Tab number.
+let g:airline_theme='base16'
 
 " NerdTree ------------------------------------------------------------------- "
 let NERDTreeShowHidden=1               " Show hidden file.
@@ -60,13 +66,10 @@ let g:indentLine_leadingSpaceEnabled=1 " Show leading spaces.
 let g:indentLine_leadingSpaceChar='·'  " Set sign for leading spaces.
 
 " Neocomplete ---------------------------------------------------------------- "
-" let g:neocomplete#enable_at_startup = 1 " Settings for neocomplete.
-" let g:neocomplete#enable_smart_case = 1
-" let g:neocomplete#sources#syntax#min_keyword_length = 3
-" let g:neocomplete#max_list = 20
 let g:acp_enableAtStartup = 0          " Disable AutoComplPop.
 let g:neocomplete#enable_at_startup = 1 " Use neocomplete.
 let g:neocomplete#enable_smart_case = 1 " Use smartcase.
+let g:neocomplete#max_list = 15        " Max number of list.
 let g:neocomplete#sources#syntax#min_keyword_length = 3 " Set minimum syntax keyword length.
 
 " Define dictionary.
